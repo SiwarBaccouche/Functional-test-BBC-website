@@ -17,10 +17,10 @@ private searchPage searchPage;
     }
 
 
-    @Given("the user on home page")
-    public void theUserIsOnTheHomePage() {
+    @Given("the user is on home page")
+    public void theUserIsOnHomePage() {
         try {
-            searchPage.openLoggedinPage();
+            searchPage.openLoggedPage();
             Hooks._scenario.log(Status.PASS, "The user is on the home page");
         } catch (Exception e) {
             Hooks._scenario.log(Status.FAIL, "The user is not on the home page");
@@ -53,8 +53,8 @@ private searchPage searchPage;
     }
 
     @Then("the user should see an error message")
-    public void displayErrorMessage() {
-        String message = searchPage.getErrorMessage();
+    public void displaySearchError() {
+        String message = searchPage.getError();
         assertTrue(message.contains("Sorry there are no results"));
     }
 

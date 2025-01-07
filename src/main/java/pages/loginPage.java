@@ -70,7 +70,7 @@ public class loginPage {
 
 
     public String getErrorMessage() {
-        WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("p[class='sb-form-message__content__text']")));
+        WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("form-message-general")));
         return message.getText();
     }
 

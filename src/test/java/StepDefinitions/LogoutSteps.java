@@ -15,7 +15,7 @@ public class LogoutSteps {
         this.logoutPage = new logoutPage(TestBase.getDriver());
     }
 
-    @Given("the user is on the home page")
+    @Given("the user in home page")
     public void theUserIsOnTheHomePage() {
         try {
             logoutPage.openLoggedinPage();
@@ -50,6 +50,7 @@ public class LogoutSteps {
 
         }
     }
+
 
     @Then("the user should see a successful logout message")
     public void userSeesSuccessfulLogoutMessage() {

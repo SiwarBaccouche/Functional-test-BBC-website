@@ -63,10 +63,16 @@ public class LoginSteps {
                 "Error Login in");
     }
 
-    @Then("the user should see an error message")
+    @Then("the user should see error message")
     public void displayErrorMessage() {
         String message = loginPage.getErrorMessage();
-        assertTrue(message.contains("That password isn’t right. You can "));
+        assertTrue(message.contains("We don't recognise that email"));
+    }
+
+  @Then("the user should see password error message")
+    public void displaypasswordErrorMessage() {
+        String message = loginPage.getErrorMessage();
+        assertTrue(message.contains("That password isn’t right. You can"));
     }
 
 

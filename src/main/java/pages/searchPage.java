@@ -19,7 +19,7 @@ public class searchPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    public void openLoggedinPage(){
+    public void openLoggedPage() {
         driver.get("https://www.bbc.com/");
     }
 
@@ -45,13 +45,9 @@ public class searchPage {
         return message.getText();
     };
 
-    public String getErrorMessage() {
-        WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("p[class='sc-ccbf3b7e-4.gtQofG']")));
+    public String getError() {
+        WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("p[class='sc-ccbf3b7e-4 gtQofG']")));
         return message.getText();
-    }
-
-    ;
-
-
+    };
 }
 
